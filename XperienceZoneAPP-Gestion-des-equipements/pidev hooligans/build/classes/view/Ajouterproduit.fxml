@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="722.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AjouterproduitController">
+   <children>
+      <TextField fx:id="nomprod" layoutX="681.0" layoutY="128.0" opacity="0.6" prefHeight="31.0" prefWidth="187.0" />
+      <TextField fx:id="prixprod" layoutX="681.0" layoutY="181.0" opacity="0.6" prefHeight="31.0" prefWidth="187.0" />
+      <TextArea fx:id="descprod" layoutX="681.0" layoutY="233.0" opacity="0.6" prefHeight="70.0" prefWidth="199.0" />
+      <TextField fx:id="quantiteprod" layoutX="687.0" layoutY="330.0" opacity="0.6" />
+      <ChoiceBox fx:id="choixcp" layoutX="687.0" layoutY="380.0" prefHeight="31.0" prefWidth="187.0" />
+      <Button layoutX="387.0" layoutY="442.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: #74da39;" text="choisir image" />
+      <Button layoutX="441.0" layoutY="610.0" mnemonicParsing="false" onAction="#ajoutProduit" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #74da39;" text="Ajouter produit" />
+      <Button fx:id="btn_retour" layoutX="701.0" layoutY="610.0" mnemonicParsing="false" onAction="#Retour" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #74da39;" text="Nos Produit" />
+      <Text fill="#393333" layoutX="390.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Produit">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#3c3838" layoutX="387.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix Produit">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#433f3f" layoutX="387.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description Produit">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#3c3b3b" layoutX="387.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Quantite Produit">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#3c3a3a" layoutX="390.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categorie">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="image_label" layoutX="609.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <VBox prefHeight="722.0" prefWidth="334.0" AnchorPane.rightAnchor="744.0">
+         <children>
+            <ImageView fitHeight="222.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true" translateX="20.0" translateY="5.0">
+               <VBox.margin>
+                  <Insets bottom="40.0" left="40.0" right="40.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../build/classes/image/385496021_292791893519238_8577172701520959440_n.png" />
+               </image>
+            </ImageView>
+            <Line endX="-100.0" endY="207.0" startX="-100.0" />
+            <Text fill="#74da39" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Produit" textAlignment="CENTER" wrappingWidth="303.68310546875">
+               <font>
+                  <Font name="Book Antiqua" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" right="10.0" top="50.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <Line endX="-100.0" endY="713.0" layoutX="445.0" layoutY="7.0" startX="-100.0" startY="-8.0" />
+   </children>
+</AnchorPane>

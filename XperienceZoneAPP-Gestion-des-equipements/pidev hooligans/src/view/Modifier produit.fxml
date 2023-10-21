@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="670.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ModifierProduitController">
+   <children>
+      <TextField fx:id="nomprodmodif" layoutX="641.0" layoutY="77.0" />
+      <TextField fx:id="prixpromodif" layoutX="641.0" layoutY="132.0" />
+      <TextArea fx:id="despromodif" layoutX="643.0" layoutY="185.0" prefHeight="65.0" prefWidth="187.0" />
+      <TextField fx:id="quantitepromodif" layoutX="643.0" layoutY="269.0" />
+      <ChoiceBox fx:id="choixpmodif" layoutX="643.0" layoutY="321.0" prefHeight="31.0" prefWidth="187.0" />
+      <Button layoutX="445.0" layoutY="445.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: #74da39;" text="choose image" />
+      <ImageView fx:id="image_view" fitHeight="150.0" fitWidth="200.0" layoutX="636.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="image_label" layoutX="566.0" layoutY="492.0" />
+      <Button layoutX="474.0" layoutY="547.0" mnemonicParsing="false" onAction="#modifierProduit" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #74da39;" text="modifier" />
+      <Button fx:id="btn_retour" layoutX="708.0" layoutY="547.0" mnemonicParsing="false" onAction="#Retour" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #74da39;" text="Nos produit" />
+      <VBox layoutY="-1.0" prefHeight="641.0" prefWidth="311.0">
+         <children>
+            <ImageView fitHeight="211.0" fitWidth="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../385496021_292791893519238_8577172701520959440_n.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Text fill="#74da39" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Produit" textAlignment="CENTER" wrappingWidth="303.68310546875">
+               <font>
+                  <Font name="Book Antiqua" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="120.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <Line endX="-100.0" endY="663.0" layoutX="425.0" layoutY="7.0" startX="-100.0" startY="-7.0" />
+      <Text fill="#393333" layoutX="346.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Produit">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#3c3838" layoutX="352.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix Produit">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#433f3f" layoutX="352.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description Produit">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#3c3b3b" layoutX="346.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Quantite Produit">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#3c3a3a" layoutX="352.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categorie">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

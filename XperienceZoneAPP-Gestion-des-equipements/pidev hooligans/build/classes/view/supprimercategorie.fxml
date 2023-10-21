@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SupprimercategorieController">
+   <children>
+      <BorderPane layoutY="-4.0" prefHeight="594.0" prefWidth="925.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0">
+         <left>
+            <AnchorPane prefHeight="542.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="actualiser" layoutX="7.0" layoutY="339.0" mnemonicParsing="false" onAction="#afficher" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #74da39;" text="actualiser" />
+                  <Button fx:id="btn_retour" layoutX="14.0" layoutY="560.0" mnemonicParsing="false" onAction="#Retour" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #74da39;" text="Retour" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../build/classes/image/385496021_292791893519238_8577172701520959440_n.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <bottom>
+            <Button fx:id="supp" mnemonicParsing="false" onAction="#deleteselectedact" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: #74da39;" text="supprimer" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="-50.0" />
+               </BorderPane.margin></Button>
+         </bottom>
+         <center>
+            <TableView fx:id="tableview" maxHeight="510.0" maxWidth="526.0" prefHeight="510.0" prefWidth="526.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="idcategorie_col" prefWidth="114.0" text="Id categorie" />
+                  <TableColumn fx:id="nomcateg_col" prefWidth="132.0" text="nom categorie " />
+                  <TableColumn fx:id="des_col" prefWidth="157.0" text="description categorie" />
+                  <TableColumn fx:id="type" prefWidth="120.0" text="type categorie" />
+               </columns>
+               <BorderPane.margin>
+                  <Insets top="-40.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
