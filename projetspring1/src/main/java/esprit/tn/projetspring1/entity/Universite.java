@@ -1,8 +1,15 @@
 package esprit.tn.projetspring1.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+
 @Table( name = "Universite")
 public class Universite {
     @Id

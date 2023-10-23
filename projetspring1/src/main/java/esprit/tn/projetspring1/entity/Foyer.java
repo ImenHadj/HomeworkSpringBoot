@@ -1,10 +1,17 @@
 package esprit.tn.projetspring1.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+
 @Table( name = "Foyer")
 public class Foyer {
     @Id
