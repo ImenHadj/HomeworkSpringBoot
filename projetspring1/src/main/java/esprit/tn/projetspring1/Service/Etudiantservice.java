@@ -2,9 +2,13 @@ package esprit.tn.projetspring1.Service;
 
 import esprit.tn.projetspring1.entity.Etudiant;
 import esprit.tn.projetspring1.repository.Etudiantrepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
+@Service
+@AllArgsConstructor
 
 public class Etudiantservice implements IEtudiantService{
    Etudiantrepository etudiantrepository;
