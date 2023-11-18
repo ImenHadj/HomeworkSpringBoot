@@ -3,6 +3,7 @@ package esprit.tn.projetspring1.Controller;
 import esprit.tn.projetspring1.Service.IBlocservice;
 import esprit.tn.projetspring1.Service.IEtudiantService;
 import esprit.tn.projetspring1.entity.Bloc;
+import esprit.tn.projetspring1.entity.Chambre;
 import esprit.tn.projetspring1.entity.Etudiant;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +37,19 @@ public class BlocController {
     @PutMapping("/update-bloc")
     public Bloc updateBloc(@RequestBody Bloc b) {
         Bloc bloc= blocservice.updateBloc(b);
+        return bloc;
+    }
+    @PutMapping("/affecter/{nomBloc}")
+    @ResponseBody
+    public Bloc affecterChambreABloc(@RequestBody List<Long>numeroChambre,@PathVariable("nomBloc") String nomBloc ) {
+        Bloc bloc = blocservice.affecterChambreABloc(numeroChambre,nomBloc);
+        return bloc;
+    }
+
+    @PutMapping("/desaffecter/{numeroChambre}")
+    @ResponseBody
+    public Bloc desaffecterChambreDeBloc(@PathVariable("numeroChambre") List<Long> numeroChambre) {
+        Bloc bloc = blocservice.desaffecterChambreDeBloc(numeroChambre);
         return bloc;
     }
 }

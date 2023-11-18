@@ -6,5 +6,8 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface Blocrepository extends CrudRepository<Bloc,Long> {
+
     //List<Bloc> findByFoyerUniversiteUniversiteId(Long idUniversite) ;
+
+    Bloc findBynomBloc (String nomBloc);
 }

@@ -7,5 +7,5 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 public interface Etudiantrepository extends CrudRepository<Etudiant , Long> {
     // public interface Etudiantrepository extends PagingAndSortingRepository<Etudiant , Long>{}
 
-
+Etudiant findByNomEtAndPrenomEt( String nomEt,String prenomEt);
 }

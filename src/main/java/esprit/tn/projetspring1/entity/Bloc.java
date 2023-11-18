@@ -1,5 +1,6 @@
 package esprit.tn.projetspring1.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,5 +26,6 @@ public class Bloc {
     @ManyToOne
     Foyer foyer;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="bloc")
+    @JsonIgnore
     private Set<Chambre> chambres;
 }
