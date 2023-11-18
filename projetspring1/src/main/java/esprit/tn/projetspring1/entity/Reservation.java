@@ -20,7 +20,7 @@ public class Reservation {
     private String idReservation;
     private Date anneeUniversitaire;
     private Boolean estValide;
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "reservation")
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "reservations")
     private Set<Etudiant> etudiants;
 
 

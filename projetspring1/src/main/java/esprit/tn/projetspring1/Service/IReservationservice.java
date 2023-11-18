@@ -2,6 +2,7 @@ package esprit.tn.projetspring1.Service;
 
 import esprit.tn.projetspring1.entity.Reservation;
 
+import java.util.Date;
 import java.util.List;
 
 public interface IReservationservice {
@@ -11,9 +12,11 @@ public interface IReservationservice {
 
     Reservation updateReservation(Reservation r);
 
-    Reservation retrieveReservation(Long idReservation);
+    Reservation retrieveReservation(String idReservation);
 
-    void removeReservation(Long idReservation);
+    void removeReservation(String idReservation);
+
+     List<Reservation> getReservationParAnneeUniversitaire(Date dateDebut , Date dateFin );
 }
 
 

@@ -11,12 +11,12 @@ import java.util.List;
 @RequestMapping("/etudiant")
 public class EtudiantController {
     IEtudiantService etudiantService;
-    // http://localhost:8080/foyer/etudiant/retrieve-all-etudiants
+    // http://localhost:8089/foyer/etudiant/retrieve-all-etudiants
     @GetMapping("/retrieve-all-etudiants")
     public List<Etudiant> getEtudiants() {
         List<Etudiant> listEtudiants = etudiantService.retrieveAllEtudiants();
         return listEtudiants;
-}// http://localhost:8080/foyer/etudiant/retrieve-etudiant/8
+}// http://localhost:8089/foyer/etudiant/retrieve-etudiant/8
     @GetMapping("/retrieve-etudiant/{etudiant-id}")
     public Etudiant retrieveEtudiant(@PathVariable("etudiant-id") Long etudiantId) {
         return etudiantService.retrieveEtudiant(etudiantId);
@@ -35,4 +35,8 @@ public class EtudiantController {
         Etudiant etudiant= etudiantService.updateEtudiant(e);
         return etudiant;
     }
-}
+    @PutMapping("/affecter/{nomEt}/{prenomEt}/{idReservation}")
+    public void affecterEtudiantAReservation(@PathVariable("nomEt")String nomEt,@PathVariable("prenomEt")String prenomEt,@PathVariable("idReservation")String idReservation){
+   Etudiant etudiant=etudiantService.affecterEtudiantAReservation(nomEt,prenomEt,idReservation);
+
+    }}

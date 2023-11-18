@@ -7,7 +7,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -25,7 +27,16 @@ public class ReservationService implements IReservationservice{
 
 
     @Override
-    public Reservation retrieveReservation(Long idReservation) {return reservationrepository.findById(idReservation).get();}
+    public Reservation retrieveReservation(String idReservation) {return reservationrepository.findById(idReservation).get();}
 
     @Override
-    public  void removeReservation(Long idReservation) {reservationrepository.deleteById(idReservation);}}
+    public  void removeReservation(String idReservation) {reservationrepository.deleteById(idReservation);}
+
+    public List<Reservation> getReservationParAnneeUniversitaire(Date dateDebut , Date dateFin ){
+        List<Reservation> reservation=reservationrepository.findByAnneeUniversitaireBetween(dateDebut , dateFin );
+
+        return reservation;
+
+    }
+
+}

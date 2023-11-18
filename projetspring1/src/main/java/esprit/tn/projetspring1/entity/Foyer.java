@@ -19,7 +19,9 @@ public class Foyer {
    private Long idFoyer;
     private String nomFoyer;
     private Long capaciteFoyer;
-    @OneToOne(mappedBy="foyer")
+
+    @OneToOne(cascade = CascadeType.ALL)
+
 private Universite universite;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="foyer")
     private Set<Bloc> blocs;
