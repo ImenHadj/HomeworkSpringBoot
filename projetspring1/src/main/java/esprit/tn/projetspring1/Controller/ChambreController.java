@@ -43,9 +43,9 @@ public class ChambreController {
         return chambre;
     }
 
-    @GetMapping("/nbChambreParTypeEtBloc/{TypeChambre}/{idBloc}")
-    public long nbChambreParTypeEtBloc(@PathVariable  ("TypeChambre") typeC TypeChambre, @PathVariable("idBloc") Long idBloc){
+    @GetMapping("/nbChambreParTypeEtBloc/{typeChambre}/{idBloc}")
+    public long nbChambreParTypeEtBloc(@PathVariable  ("typeChambre") typeC typeChambre, @PathVariable("idBloc") Long idBloc){
 
-        return chambreservice.nbChambreParTypeEtBloc(TypeChambre, idBloc);
+        return chambreservice.nbChambreParTypeEtBloc(typeChambre, idBloc);
 
     }}

@@ -9,5 +9,46 @@ import java.util.List;
 
 public interface Chambrerepository extends CrudRepository<Chambre,Long> {
     Chambre findByNumeroChambre(Long numero);
-    List<Chambre> findByTypeChambreAndBlocIdBloc(typeC TypeChambre, Long idBloc );
+    List<Chambre> findByTypeChambreAndBlocIdBloc(typeC typeChambre, Long idBloc );
+
+    long countByTypeChambre(typeC typeChambre );
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,9 +5,14 @@ import esprit.tn.projetspring1.entity.Chambre;
 import esprit.tn.projetspring1.repository.Blocrepository;
 import esprit.tn.projetspring1.repository.Chambrerepository;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
+
+@Slf4j
 
 @Service
 @AllArgsConstructor
@@ -60,5 +65,18 @@ public class Blocservice implements IBlocservice {
             }
         }
         return null;
+    }
+    @Scheduled(fixedRate = 60000)
+    void listeChambresParBloc() {
+        List<Bloc> blocs = (List<Bloc>) blocrepository.findAll();
+        blocs.forEach(ch -> {
+            log.info("Bloc : " + ch.getNomBloc() + "ayant une capacité de : " + ch.getCapaciteBloc());
+            log.info("Liste des chambres du bloc " + ch.getNomBloc());
+            Set<Chambre> chambre = ch.getChambres();
+            chambre.forEach(cha -> {
+                log.info("chambre numéro " + cha.getNumeroChambre() + "de typr" + cha.getTypeChambre());
+            });
+
+        });
     }}
 

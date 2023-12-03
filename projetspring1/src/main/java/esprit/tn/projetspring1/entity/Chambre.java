@@ -19,7 +19,7 @@ public class Chambre {
     private Long idChambre;
     private Long numeroChambre;
     @Enumerated(EnumType.STRING)
-    private typeC TypeChambre;
+    private typeC typeChambre;
     @ManyToOne
     Bloc bloc;
     @OneToMany(cascade = CascadeType.ALL)

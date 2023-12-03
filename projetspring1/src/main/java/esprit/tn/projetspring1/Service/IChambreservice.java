@@ -17,5 +17,5 @@ public interface IChambreservice {
 
     void removeChambre(Long idChambre);
 
-     long nbChambreParTypeEtBloc(typeC TypeChambre, Long idBloc );
+     long nbChambreParTypeEtBloc(typeC typeChambre, Long idBloc );
 }
